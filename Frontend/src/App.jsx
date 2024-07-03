@@ -1,12 +1,10 @@
 import React from 'react'
-import Signup from './Pages/signup'
+import LandingPage from './Pages/LandingPage'
 
-function App() {
+export default function App() {
   return (
     <div>
-    <Signup/>
+    <LandingPage />
     </div>
   )
 }
-
-export default App
