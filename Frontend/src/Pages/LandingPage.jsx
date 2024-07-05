@@ -1,10 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Navout from './components/navout'
 import Advert from './components/advert'
 import Heading from './components/heading'
 import Offers from './components/offers'
 import Weekly from './components/weekly'
-import Weeklyad from './components/weeklyad'
+import WeeklyadContainer from './components/WeeklyadContainer'
+import Grilling from './components/Grilling'
 
 export default function LandingPage() {
   return (
@@ -23,14 +24,15 @@ export default function LandingPage() {
     <Offers photo='./src/assets/pictures/pizza.jpeg' offer='diwali special' details='get 20% discount in this diwali'/>
     </div>
     <Weekly />
-    <div className='flex items-center justify-center m-2 gap-4'>
-    <Weeklyad price='$10' details="This is a momo so it is called momo" photo='./src/assets/pictures/momo.jpg'></Weeklyad>
-    <Weeklyad price='$10' details="This is a momo so it is called momo" photo='./src/assets/pictures/momo.jpg'></Weeklyad>
-    <Weeklyad price='$10' details="This is a momo so it is called momo" photo='./src/assets/pictures/momo.jpg'></Weeklyad>
-    <Weeklyad price='$10' details="This is a momo so it is called momo" photo='./src/assets/pictures/momo.jpg'></Weeklyad>
-    <Weeklyad price='$10' details="This is a momo so it is called momo" photo='./src/assets/pictures/momo.jpg'></Weeklyad>
-    <Weeklyad price='$10' details="This is a momo so it is called momo" photo='./src/assets/pictures/momo.jpg'></Weeklyad>
+    <div className='ml-80 mb-8'>
+    <WeeklyadContainer />
     </div>
+    <Heading head="Let's get grilling" />
+    <div className='flex items-center justify-center gap-8 my-4'>
+       <Grilling photo='./src/assets/pictures/dessert.jpg' details='eat dessert and be like hazzard'/>
+       <Grilling photo='./src/assets/pictures/dessert.jpg' details='eat dessert and be like hazzard'/>
+       <Grilling photo='./src/assets/pictures/dessert.jpg' details='eat dessert and be like hazzard'/>
     </div>
+      </div>
   )
 }
