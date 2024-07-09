@@ -12,8 +12,6 @@ export default function WeeklyadContainer() {
     { price: '$10', details: "This is a momo so it is called momo", photo: './src/assets/pictures/momo.jpg' },
     { price: '$10', details: "This is a momo so it is called momo", photo: './src/assets/pictures/momo.jpg' },
     { price: '$10', details: "This is a momo so it is called momo", photo: './src/assets/pictures/momo.jpg' },
-    { price: '$10', details: "This is a momo so it is called momo", photo: './src/assets/pictures/momo.jpg' },
-    { price: '$10', details: "This is a momo so it is called momo", photo: './src/assets/pictures/momo.jpg' },
   ];
 
   const handleNext = () => {
