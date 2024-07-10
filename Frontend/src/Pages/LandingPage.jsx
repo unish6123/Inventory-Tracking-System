@@ -7,6 +7,7 @@ import Weekly from './components/weekly'
 import WeeklyadContainer from './components/WeeklyadContainer'
 import Grilling from './components/Grilling'
 import Dailies from './components/Dailies'
+import Footer from './components/Footer'
 
 export default function LandingPage() {
   return (
@@ -43,6 +44,9 @@ export default function LandingPage() {
     <Offers photo='./src/assets/pictures/dailyfood.png' offer='daily items' details='get 20% discount on daily items'/>
     <Offers photo='./src/assets/pictures/dailyfood.png' offer='daily items' details='get 20% discount on daily items'/>
        </div>
+    </div>
+    <div className='w-full'>
+    <Footer />
     </div>
       </div>
   )
