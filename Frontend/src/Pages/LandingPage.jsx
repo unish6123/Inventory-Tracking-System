@@ -26,7 +26,7 @@ export default function LandingPage() {
     <Offers photo='./src/assets/pictures/pizza.jpeg' offer='diwali special' details='get 20% discount in this diwali'/>
     </div>
     <Weekly />
-    <div className='ml-80 mb-8'>
+    <div className='mb-8'>
     <WeeklyadContainer />
     </div>
     <Heading head="Let's get grilling" />

@@ -7,6 +7,8 @@ export default function Navout() {
        <div className=' cursor-pointer text-black text-xl font-bold hover:text-red-400 hover:underline'>
        Get your Grocerries 
        </div>
+       <div className='font-bold text-yellow-400 text-2xl transition hover:scale-105 cursor-pointer'>Weekly Ad</div>
+       <div className='font-bold cursor-pointer text-red-400 text-2xl transition hover:scale-105'>Dailies</div>
        <div className='flex-grow mx-4'>
        <input 
        type='text'

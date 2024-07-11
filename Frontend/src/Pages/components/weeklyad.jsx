@@ -1,14 +1,45 @@
 import React from 'react';
 
-export default function Weeklyad({ photo, price, details }) {
+export default function Weeklyad({
+  imageSrc,
+  title,
+  price,
+  originalPrice,
+  unit,
+  quantity,
+  additionalInfo,
+}) {
   return (
-    <div className="cursor-pointer w-60 max-w-sm rounded overflow-hidden shadow-lg border border-gray-200 h-80 flex flex-col transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
-      <div className="h-40 w-full overflow-hidden">
-        <img src={photo} alt="photo" className="w-full h-full object-cover"></img>
+    <div className="w-full rounded-md shadow-md p-4 bg-white cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+      <div className="relative rounded-md overflow-hidden">
+        <img
+          src={imageSrc}
+          alt={title}
+          width={200}
+          height={150}
+          className="object-contain"
+        />
       </div>
-      <div className="font-bold text-xl text-black mx-3 ml-8 my-1">{details}</div>
-      <div className="bg-red-400 text-white w-10 h-5 ml-8 my-2">{price}</div>
-      <button className="bg-white hover:bg-red-700 hover:text-white text-black font-bold py-2 ml-8 rounded h-12 w-32 border border-black">Buy Now</button>
+      <button className="mt-4 px-4 py-2 rounded-md bg-red-500 text-white hover:bg-red-400">
+        Log In to Add
+      </button>
+      <div className="mt-4">
+        <h3 className="text-lg font-medium text-gray-800">{title}</h3>
+        <p className="text-xl font-bold text-red-500">
+          {price}
+          {originalPrice && (
+            <span className="text-gray-500 line-through ml-2">
+              {originalPrice}
+            </span>
+          )}
+        </p>
+        <p className="text-gray-600">
+          {quantity} {unit}
+          {additionalInfo && (
+            <span className="text-gray-600 ml-2">{additionalInfo}</span>
+          )}
+        </p>
+      </div>
     </div>
   );
-}
+};

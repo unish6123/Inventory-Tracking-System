@@ -1,57 +1,62 @@
 import React, { useRef } from 'react';
 import Weeklyad from './weeklyad.jsx'
+import NavigationArrow from './NavigationArrow.jsx';
 
 export default function WeeklyadContainer() {
-  const containerRef = useRef(null);
-  const itemsPerPage = 4;
-
-  const ads = [
-    { price: '$10', details: "This is a momo so it is called momo", photo: './src/assets/pictures/momo.jpg' },
-    { price: '$10', details: "This is a momo so it is called momo", photo: './src/assets/pictures/momo.jpg' },
-    { price: '$10', details: "This is a momo so it is called momo", photo: './src/assets/pictures/momo.jpg' },
-    { price: '$10', details: "This is a momo so it is called momo", photo: './src/assets/pictures/momo.jpg' },
-    { price: '$10', details: "This is a momo so it is called momo", photo: './src/assets/pictures/momo.jpg' },
-    { price: '$10', details: "This is a momo so it is called momo", photo: './src/assets/pictures/momo.jpg' },
+  const weeklyAdData = [
+    {
+      imageSrc: "./src/assets/pictures/momo.jpg",
+      title: "Jennie-O Fresh Ground Turkey",
+      price: "$6.59",
+      unit: "oz",
+      quantity: "16",
+      additionalInfo: "($0.41/oz)",
+    },
+    {
+      imageSrc: "/src/assets/pictures/momo.jpg",
+      title: "Pacific SeaFood, Shrimp Easy Peel, Farm-Raised",
+      price: "$12.98",
+      originalPrice: "$26.99",
+      unit: "oz",
+      quantity: "16",
+      additionalInfo: "($6.49/lb)",
+    },
+    {
+      imageSrc: "/src/assets/pictures/momo.jpg",
+      title: "Brawny Tear-A-Square Paper Towels, Double Rolls, 2-Ply",
+      price: "$13.99",
+      originalPrice: "$19.49",
+      unit: "roll",
+      quantity: "2",
+      additionalInfo: "($2.33/roll)",
+    },
+    {
+      imageSrc: "/src/assets/pictures/momo.jpg",
+      title: "FOSTER FARMS Young Chicken, Cage Free, Fresh & Natural",
+      price: "approx $6.99",
+      unit: "lb",
+      quantity: "5.5",
+      additionalInfo: "($1.27/lb)",
+    },
+    {
+      imageSrc: "/src/assets/pictures/momo.jpg",
+      title: "LaCroix Sparkling Water, Tangerine",
+      price: "$3.99",
+      originalPrice: "$5.19",
+      unit: "oz",
+      quantity: "96",
+      additionalInfo: "($0.04 / oz)",
+    },
   ];
 
-  const handleNext = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({ left: containerRef.current.offsetWidth, behavior: 'smooth' });
-    }
-  };
-
-  const handlePrev = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({ left: -containerRef.current.offsetWidth, behavior: 'smooth' });
-    }
-  };
-
   return (
-
-      <div className="relative w-4/5">
-        <div className="absolute top-1/2 transform -translate-y-1/2 left-0 z-10">
-          <button
-            onClick={handlePrev}
-            className="p-2 bg-gray-200 rounded-full shadow hover:bg-gray-300"
-          >
-            &#8592;
-          </button>
-        </div>
-        <div className="absolute top-1/2 transform -translate-y-1/2 right-0 z-10">
-          <button
-            onClick={handleNext}
-            className="p-2 bg-gray-200 rounded-full shadow hover:bg-gray-300"
-          >
-            &#8594;
-          </button>
-        </div>
-        <div ref={containerRef} className="flex items-center justify-center gap-6 overflow-x-auto snap-x snap-mandatory">
-          {ads.map((ad, index) => (
-            <div key={index} className="snap-start">
-              <Weeklyad price={ad.price} details={ad.details} photo={ad.photo} />
-            </div>
-          ))}
-        </div>
+    <div className="container mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        {weeklyAdData.map((item, index) => (
+          <Weeklyad key={index} {...item} />
+        ))}
       </div>
+      {/* <NavigationArrow /> */}
+    </div>
   );
 }
