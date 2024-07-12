@@ -1,12 +1,16 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import Login from '../Login'
 
 export default function Navout() {
   return (
     <nav className='bg-gray-100 p-4'>
        <div className='container mx-auto flex items-center justify- gap-20'>
+       <NavLink to='/'>
        <div className=' cursor-pointer text-black text-xl font-bold hover:text-red-400 hover:underline'>
        Get your Grocerries 
        </div>
+       </NavLink>
        <div className='font-bold text-yellow-400 text-2xl transition hover:scale-105 cursor-pointer'>Weekly Ad</div>
        <div className='font-bold cursor-pointer text-red-400 text-2xl transition hover:scale-105'>Dailies</div>
        <div className='flex-grow mx-4'>
@@ -21,7 +25,9 @@ export default function Navout() {
        <div className='text-white cursor-pointer px-3 py-2 rounded-md text-sm font-medium bg-yellow-400 hover:bg-gray-700'>
        Signup
        </div>
-       <div className='text-white cursor-pointer px-3 py-2 rounded-md text-sm font-medium bg-blue-400 hover:bg-gray-700'>Login</div>
+       <NavLink to='/login'>
+       <button className='text-white cursor-pointer px-3 py-2 rounded-md text-sm font-medium bg-blue-400 hover:bg-gray-700'>Login</button>
+       </NavLink>
        </div>
        </div>
     </nav>
