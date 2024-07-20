@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Modal from './components/Modal';
 import Login from './Login';
 import Signup from './Signup';
+import { NavLink } from 'react-router-dom';
 
 export default function LandingPage() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -27,14 +28,16 @@ export default function LandingPage() {
       </div>
       <Heading head='Make your shopping easy' />
       <div className='flex items-center justify-center m-2 gap-4'>
+      <NavLink to ='/offers'>
         <Offers photo='./src/assets/pictures/pizza.jpeg' offer='diwali special' details='get 20% discount in this diwali' />
+        </NavLink>
         <Offers photo='./src/assets/pictures/pizza.jpeg' offer='diwali special' details='get 20% discount in this diwali' />
         <Offers photo='./src/assets/pictures/pizza.jpeg' offer='diwali special' details='get 20% discount in this diwali' />
         <Offers photo='./src/assets/pictures/pizza.jpeg' offer='diwali special' details='get 20% discount in this diwali' />
         <Offers photo='./src/assets/pictures/pizza.jpeg' offer='diwali special' details='get 20% discount in this diwali' />
         <Offers photo='./src/assets/pictures/pizza.jpeg' offer='diwali special' details='get 20% discount in this diwali' />
       </div>
-      <Weekly />
+      <Weekly ad='Weekly ad'/>
       <div className='mb-8'>
         <WeeklyadContainer />
       </div>

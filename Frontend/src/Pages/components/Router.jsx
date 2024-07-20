@@ -3,6 +3,7 @@ import Login from "../Login";
 import App from "../../App";
 import Signup from "../Signup";
 import ConfirmSignin from "../ConfirmSignin";
+import InsideWeeklyad from "../InsideWeeklyad";
 
 const router = createBrowserRouter([
     {
@@ -17,14 +18,11 @@ const router = createBrowserRouter([
     {
       path: "/",
       element: <App/>,
-      children: [
-        {
-          
-        },
-        {
-        }
-      ]
     },
+    {
+      path:'/offers',
+      element:<InsideWeeklyad />
+    }
   ]);
   
   export default router;
