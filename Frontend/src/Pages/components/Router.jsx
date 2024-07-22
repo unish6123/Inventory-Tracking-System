@@ -4,7 +4,7 @@ import App from "../../App";
 import Signup from "../Signup";
 import ConfirmSignin from "../ConfirmSignin";
 import InsideWeeklyad from "../InsideWeeklyad";
-import InWeekly from "../Inweekly";
+import InWeekly from "../inweekly";
 
 const router = createBrowserRouter([
     {

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function Offers({ photo, offer, details, button }) {
   return (
+    <NavLink to = '/offers'>
     <div className="cursor-pointer max-w-sm rounded overflow-hidden shadow-lg border border-gray-200 h-80 flex flex-col transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
       <div className="h-40 w-full overflow-hidden">
         <img src={photo} alt={offer} className="h-full w-full object-cover" />
@@ -15,5 +16,6 @@ export default function Offers({ photo, offer, details, button }) {
         </button>
       </div>
     </div>
+    </NavLink>
   );
 }

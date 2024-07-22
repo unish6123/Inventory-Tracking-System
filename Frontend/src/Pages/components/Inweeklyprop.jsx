@@ -1,11 +1,7 @@
 import React from 'react';
-import Navout from './components/navout';
-import Footer from './components/Footer';
 
-export default function InWeekly({photo,description,perlb,price,totallb}) {
+export default function InWeeklyprop({photo,description,perlb,price,totallb}) {
   return (
-    <>
-    <Navout />
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
       <img
         src={photo}
@@ -22,7 +18,5 @@ export default function InWeekly({photo,description,perlb,price,totallb}) {
         </button>
       </div>
     </div>
-    <Footer />
-    </>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function Weeklyad({
   imageSrc,
@@ -10,6 +11,7 @@ export default function Weeklyad({
   additionalInfo,
 }) {
   return (
+    <NavLink to = 'inweekly'>
     <div className="w-full rounded-md shadow-md p-4 bg-white cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
       <div className="relative rounded-md overflow-hidden">
         <img
@@ -41,5 +43,6 @@ export default function Weeklyad({
         </p>
       </div>
     </div>
+    </NavLink>
   );
 };
