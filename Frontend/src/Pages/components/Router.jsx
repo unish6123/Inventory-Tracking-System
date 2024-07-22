@@ -4,12 +4,12 @@ import App from "../../App";
 import Signup from "../Signup";
 import ConfirmSignin from "../ConfirmSignin";
 import InsideWeeklyad from "../InsideWeeklyad";
+import InWeekly from "../Inweekly";
 
 const router = createBrowserRouter([
     {
         path:'/confirmsignin',
         element:<ConfirmSignin />
-
     },
     {
         path:'/signup',
@@ -22,6 +22,10 @@ const router = createBrowserRouter([
     {
       path:'/offers',
       element:<InsideWeeklyad />
+    },
+    {
+      path:'/inweekly',
+      element:<InWeekly />
     }
   ]);
   
