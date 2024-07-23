@@ -1,7 +1,9 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function Grilling({ photo, offer, details}) {
   return (
+    <NavLink to = '/grillingpage'>
     <div className="cursor-pointer max-w-sm rounded overflow-hidden shadow-lg border border-gray-200 h-96 w-72 flex flex-col gap-4 transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
       <div className="h-64 w-full overflow-hidden">
         <img src={photo} alt={offer} className="h-full w-full object-cover" />
@@ -14,5 +16,6 @@ export default function Grilling({ photo, offer, details}) {
         </button>
       </div>
     </div>
+    </NavLink>
   );
 }

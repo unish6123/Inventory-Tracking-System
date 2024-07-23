@@ -13,7 +13,7 @@ export default function Weeklyad({
   return (
     <NavLink to = 'inweekly'>
     <div className="w-full rounded-md shadow-md p-4 bg-white cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
-      <div className="relative rounded-md overflow-hidden">
+      <div className="relative rounded-md overflow-hidden border-2 border-gray-400">
         <img
           src={imageSrc}
           alt={title}
