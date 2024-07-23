@@ -23,7 +23,7 @@ export default function WeeklyadContainer() {
     },
     {
       imageSrc: "/src/assets/pictures/momo.jpg",
-      title: "Brawny Tear-A-Square Paper Towels, Double Rolls, 2-Ply",
+      title: "Brawny Tear-A-Square Paper Towels, Double Rolls",
       price: "$13.99",
       originalPrice: "$19.49",
       unit: "roll",
@@ -32,7 +32,7 @@ export default function WeeklyadContainer() {
     },
     {
       imageSrc: "/src/assets/pictures/momo.jpg",
-      title: "FOSTER FARMS Young Chicken, Cage Free, Fresh & Natural",
+      title: "FOSTER FARMS Young Chicken, Cage Free, Fresh",
       price: "approx $6.99",
       unit: "lb",
       quantity: "5.5",
